@@ -7,14 +7,14 @@ import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
 })
 export class WebsocketService {
   data: any;
-  myWebSocket: WebSocketSubject<any> = webSocket('ws://localhost:5000');
+  myWebSocket: WebSocketSubject<any> = webSocket('ws://tictactoeonlinescl.herokuapp.com:21224');
   constructor() {
     this.setConnection();
   }
 
   setConnection(): void {
     this.closeConnection();
-    this.myWebSocket = webSocket('ws://localhost:5000');
+    this.myWebSocket = webSocket('ws://tictactoeonlinescl.herokuapp.com:21224');
   }
 
   closeConnection(): void {

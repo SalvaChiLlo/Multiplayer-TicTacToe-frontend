@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "tictactoeonline-dd263"
+  },
+  "targets": {
+    "tictactoeonline-dd263": {
+      "hosting": {
+        "tic-tac-toe": [
+          "tictactoeonline-dd263"
+        ]
+      }
+    }
   }
 }
