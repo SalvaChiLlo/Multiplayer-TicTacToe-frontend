@@ -24,6 +24,10 @@ export class GameComponent implements OnInit {
 
   constructor(private socket: WebsocketService) {}
 
+  // installPwa(): void {
+  //   this.Pwa.promptEvent.prompt();
+  // }
+
   ngOnInit(): void {
     this.turn = document.getElementById('turn');
     this.title = document.getElementById('title');
@@ -49,7 +53,7 @@ export class GameComponent implements OnInit {
         this.cont = 0;
         for (let i = 0; i < this.grid.length; i++) {
           this.grid[i].innerHTML = gameStatus[i];
-          if(gameStatus[i] !== '') {
+          if (gameStatus[i] !== '') {
             this.cont++;
           }
         }
