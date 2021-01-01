@@ -1,0 +1,22 @@
+<h1 class="title" (click)="startGame()" id="title">Press To Start Playing</h1>
+<div class="container">
+  <p id="turn">Your turn ==> X</p>
+  <div class="top">
+    <div #box1 class="top_in box" (click)="play(box1)"></div>
+    <div #box2 class="middle_in box" (click)="play(box2)"></div>
+    <div #box3 class="bottom_in box" (click)="play(box3)"></div>
+  </div>
+  <div class="middle">
+    <div #box4 class="top_in box" (click)="play(box4)"></div>
+    <div #box5 class="middle_in box" (click)="play(box5)"></div>
+    <div #box6 class="bottom_in box" (click)="play(box6)"></div>
+  </div>
+  <div class="bottom">
+    <div #box7 class="top_in box" (click)="play(box7)"></div>
+    <div #box8 class="middle_in box" (click)="play(box8)"></div>
+    <div #box9 class="bottom_in box" (click)="play(box9)"></div>
+  </div>
+  <button id="reset" (click)="reset()">Reset Game</button>
+</div>
+
+<script src="script.js"></script>

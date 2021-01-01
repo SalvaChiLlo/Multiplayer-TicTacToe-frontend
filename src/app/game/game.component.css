@@ -1,0 +1,121 @@
+.title {
+  cursor: pointer;
+}
+
+.top .top_in,
+.top .middle_in,
+.top .bottom_in,
+.middle .top_in,
+.middle .middle_in,
+.middle .bottom_in,
+.bottom .top_in,
+.bottom .middle_in,
+.bottom .bottom_in {
+  border: 1px solid white;
+  width: 100px;
+  height: 100px;
+  display: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top,
+.middle,
+.bottom {
+  display: flex;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+}
+
+#reset {
+  display: none;
+  margin: 20px;
+  cursor: pointer;
+  font-size: large;
+  font-family: "Varela Round", sans-serif;
+  border-radius: 500px;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  transition: all 1s;
+}
+
+#reset:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+}
+
+#turn {
+  display: none;
+  cursor: default;
+  font-size: 40px;
+  margin: 20;
+}
+
+h5{
+  margin: 0;
+}
+
+.top .top_in {
+  border-radius: 20px 0px 0px 0px;
+}
+
+.top .bottom_in {
+  border-radius: 0px 20px 0px 0px;
+}
+
+.bottom .bottom_in {
+  border-radius: 0px 0px 20px 0px;
+}
+
+.bottom .top_in {
+  border-radius: 0px 0px 0px 20px;
+}
+
+div div div {
+  transition: all 0.5s;
+  font-size: 50px;
+  display: flex;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  justify-content: center;
+  align-items: center;
+}
+
+div div div:hover {
+  transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 0.507);
+  box-shadow: 0px 0px 20px 0px rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 500px) {
+  div div div {
+    transition: all 0.1s;
+  }
+}
