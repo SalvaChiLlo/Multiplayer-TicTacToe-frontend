@@ -237,12 +237,20 @@ export class GameComponent implements OnInit {
         : 'Not your turn';
 
     if (xWins) {
-      this.turn.innerHTML = 'X wins';
+      if (this.team === 'player1') {
+        this.turn.innerHTML = 'You win';
+      } else if (this.team === 'player2') {
+        this.turn.innerHTML = 'You lose';
+      }
       this.gameFinished = true;
     }
 
     if (oWins) {
-      this.turn.innerHTML = 'O wins';
+      if (this.team === 'player1') {
+        this.turn.innerHTML = 'You lose';
+      } else if (this.team === 'player2') {
+        this.turn.innerHTML = 'You win';
+      }
       this.gameFinished = true;
     }
 
@@ -261,7 +269,20 @@ export class GameComponent implements OnInit {
     }
 
     if (xWins || oWins) {
-      this.turn.style.color = 'green';
+      if (xWins) {
+        if (this.team === 'player1') {
+          this.turn.style.color = 'green';
+        } else if (this.team === 'player2') {
+          this.turn.style.color = 'red';
+        }
+      }
+      if (oWins) {
+        if (this.team === 'player1') {
+          this.turn.style.color = 'red';
+        } else if (this.team === 'player2') {
+          this.turn.style.color = 'green';
+        }
+      }
     }
   }
 }
