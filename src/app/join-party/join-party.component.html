@@ -1,0 +1,5 @@
+<button (click)="joinParty()">Participar</button>
+<input type="text" name="userName" id="userName" [(ngModel)]="name" />
+<ul>
+  <li *ngFor="let client of connectedClients">{{ client }}</li>
+</ul>

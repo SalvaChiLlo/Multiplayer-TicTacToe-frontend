@@ -1,5 +1,6 @@
 import { WebsocketService } from './../websocket.service';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-game',
@@ -36,6 +37,7 @@ export class GameComponent implements OnInit {
     ) as HTMLCollectionOf<HTMLElement>;
     this.resetBTN = document.getElementById('reset');
     this.processData();
+    console.log(environment.socketURL);
   }
 
   processData(): void {
@@ -43,22 +45,24 @@ export class GameComponent implements OnInit {
       next: (data) => {
         console.log(data);
         const { status, team, turn, gameStatus } = data;
-        this.status = status;
-        if (team) {
-          this.team = team;
-        }
-        this.gameStatus = gameStatus;
-        this.playerTurn = turn;
-        // tslint:disable-next-line: prefer-for-of
-        this.cont = 0;
-        for (let i = 0; i < this.grid.length; i++) {
-          this.grid[i].innerHTML = gameStatus[i];
-          if (gameStatus[i] !== '') {
-            this.cont++;
+        if (status === 'HI') {
+          this.status = status;
+          if (team) {
+            this.team = team;
           }
-        }
+          this.gameStatus = gameStatus;
+          this.playerTurn = turn;
+          // tslint:disable-next-line: prefer-for-of
+          this.cont = 0;
+          for (let i = 0; i < this.grid.length; i++) {
+            this.grid[i].innerHTML = gameStatus[i];
+            if (gameStatus[i] !== '') {
+              this.cont++;
+            }
+          }
 
-        this.checkGameStatus();
+          this.checkGameStatus();
+        }
       },
       error: (error) => console.error(error),
       complete: () => console.log('Completed'),
@@ -115,7 +119,8 @@ export class GameComponent implements OnInit {
         'HI',
         this.team,
         this.playerTurn,
-        gameStatus
+        gameStatus,
+        Math.random() + 'das'
       );
     }
     this.checkGameStatus();
