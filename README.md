@@ -8,7 +8,7 @@ Backend for this game is here: https://github.com/SalvaChiLlo/Multiplayer-TicTac
 
 
 ## This game is still in development so many features will be comming soon
-It's an alpha version so at the moment, only can be played for two people.
+It's an alpha version so, at the moment, only can be played by two people.
 
 Soon I'll be adding rooms so people will be able to choose who can play with.
 
