@@ -1,6 +1,6 @@
 # Multiplayer TicTacToe
 
-WebApp game developed with Angular - Typescript - Websockets
+WebApp game developed with Angular - Typescript - Websockets - Firebase (Frontend Hosting)
 
 You can test it here: https://tictactoe-online.tk/
 
