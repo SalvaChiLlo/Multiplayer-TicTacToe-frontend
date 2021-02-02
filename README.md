@@ -1,27 +1,13 @@
-# TicTacToe
+# Multiplayer TicTacToe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+WebApp game developed with Angular - Typescript - Websockets
 
-## Development server
+You can test it here: https://tictactoe-online.tk/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Backend for this game is here: https://github.com/SalvaChiLlo/Multiplayer-TicTacToe-server
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## This game is still in development so many features will be comming soon
+It's an alpha version so at the moment, only can be played for two people.
+Soon I'll be adding rooms so people will be able to choose who can play with.
+As it's based on my HTML-CSS-JAVASCRIPT [version](https://github.com/SalvaChiLlo/tic_tac_toe) it's still not using all Angular capabilities as well as its way of work
